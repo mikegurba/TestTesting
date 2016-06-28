@@ -8,6 +8,12 @@ namespace TestTesting.Controllers
 {
     public class HomeController : Controller
     {
+
+        public ActionResult Test()
+        {
+            ViewBag.Test = "test";
+            return View();
+        }
         public ActionResult Index()
         {
             return View();

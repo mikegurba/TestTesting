@@ -13,6 +13,14 @@ namespace TestTesting.Tests.Controllers
     public class HomeControllerTest
     {
         [TestMethod]
+        public void Test()
+        {
+            HomeController controller = new HomeController();
+            ViewResult result = controller.Test() as ViewResult;
+            Assert.AreEqual("test", result.ViewBag.Test);
+        }
+
+        [TestMethod]
         public void Index()
         {
             // Arrange
